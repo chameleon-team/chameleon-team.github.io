@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no" />
+    <title>下载 Chameleon Playground</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .wrap {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon {
+            width: 50%;
+            margin-top: -100px;
+        }
+        .button {
+            width: 70%;
+            background: rgb(29, 110, 240);
+            border-radius: 5px;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            padding: 15px 20px;
+            margin-top: 50px;
+            display: block;
+        }
+        .disable {
+            background: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <image class="icon" src="https://static.didialift.com/pinche/gift/resource/ic_launcher.png"></image>
+        <a class="button android" href="http://cmljs.org/playground/app-release.apk">立即下载 Chameleon Playground</a>
+        <div class="button ios disable">即将发布</div>
+    </div>
+    <script type="text/javascript">
+        var u = navigator.userAgent;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        var btnA = document.querySelector('.android');
+        var btnI = document.querySelector('.ios');
+        if(isAndroid) {
+            btnI.style.display = 'none';
+        } else {
+            btnA.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
