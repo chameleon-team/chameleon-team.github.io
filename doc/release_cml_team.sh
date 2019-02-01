@@ -29,7 +29,7 @@ rm -rf ./${PROJECT_NAME}/doc/website
 cd ./${PROJECT_NAME}
 git diff
 
-read -p "你确定要推送到beatles-chameleon.github.io吗[Y/y]?" -n 1 -r
+read -p "你确定要推送到chameleon-teamp.github.io吗[Y/y]?" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
