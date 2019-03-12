@@ -1,4 +1,4 @@
-RESULT=`grep "didialift.com"  -R --exclude-dir=chameleon --exclude-dir=beatles-chameleon.github.io --exclude-dir=.git --exclude=*.sh ./`
+RESULT=`grep "didialift.com"  -R --exclude-dir=chameleon --exclude-dir=beatles-chameleon.github.io --exclude-dir=chameleon-team.github.io --exclude-dir=.git --exclude=*.sh ./`
 echo "$RESULT"
 DIDI_COUNT=`echo "$RESULT" | sed -e '/^$/d' | wc -l`
 if [ $DIDI_COUNT -gt "0" ];then
